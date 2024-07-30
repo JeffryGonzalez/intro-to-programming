@@ -1,5 +1,6 @@
 ﻿
 
+
 namespace Banking.Domain;
 
 public class Account
@@ -13,5 +14,11 @@ public class Account
     public decimal GetBalance()
     {
         return _currentBalance;
+    }
+
+    public void Withdraw(decimal amountToWithdraw)
+    {
+        _currentBalance -= amountToWithdraw;
+
     }
 }
