@@ -23,7 +23,8 @@ public class MakingWithdrawals
     {
         var account = new Account();
 
-        account.Withdraw((TransactionAmount)account.GetBalance().Balance);
+        // UG-LEE.... needs help.
+        account.Withdraw((TransactionAmount)(decimal)account.GetBalance());
 
         Assert.Equal(0M, account.GetBalance());
     }
