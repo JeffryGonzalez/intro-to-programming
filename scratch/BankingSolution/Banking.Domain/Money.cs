@@ -14,12 +14,22 @@ public record Currency
     public decimal GetValue()
     {
         decimal result = _dollars + ((decimal)_cents / 100);
-        return result;// slime, bs
+        return result;
     }
     public static implicit operator decimal(Currency currency)
     {
         return currency.GetValue();
     }
+    public static explicit operator Currency(decimal amount)
+    {
+        uint dollars = (uint)amount;
+        var remainder = amount - dollars;
+        uint cents = (uint)(remainder * 100);
+        return new Currency(dollars, cents, "USD");
+
+    }
+    public uint Dollars => _dollars;
+    public uint Cents => _cents;
     public static Currency FromUsd(uint dollars, uint cents)
     {
         if (ArgsAreValid(dollars, cents))
@@ -30,7 +40,6 @@ public record Currency
         {
             throw new InvalidCurrencyException();
         }
-
     }
 
     private static bool ArgsAreValid(uint dollars, uint cents)
