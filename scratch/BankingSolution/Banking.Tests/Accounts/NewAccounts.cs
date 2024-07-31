@@ -1,8 +1,6 @@
 ﻿
 
 
-using Banking.Domain;
-
 namespace Banking.Tests.Accounts;
 public class NewAccounts
 {

@@ -18,6 +18,11 @@ public class Account
 
     public void Withdraw(decimal amountToWithdraw)
     {
+        if (amountToWithdraw >= _currentBalance)
+        {
+            return;
+        }
+
         _currentBalance -= amountToWithdraw;
 
     }
