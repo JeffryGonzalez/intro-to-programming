@@ -11,7 +11,7 @@ public class OverdraftNotAllowed
 
 
         Assert.Throws<AccountOverdraftException>(
-            () => account.Withdraw(openingBalance + .01M)
+            () => account.Withdraw((Currency)(openingBalance + .01M))
             );
 
         Assert.Equal(openingBalance, account.GetBalance());

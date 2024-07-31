@@ -14,7 +14,7 @@ public class MakingDeposits
 
         // When
 
-        account.Deposit(amountToDeposit);
+        account.Deposit((Currency)amountToDeposit);
 
         // Then
         var newBalance = account.GetBalance();

@@ -6,17 +6,17 @@ namespace Banking.Domain;
 public class Account
 {
     private decimal _currentBalance = 7000;
-    public void Deposit(decimal amountToDeposit)
+    public void Deposit(Currency amountToDeposit)
     {
         _currentBalance += amountToDeposit;
     }
 
-    public decimal GetBalance()
+    public Currency GetBalance()
     {
-        return _currentBalance;
+        return (Currency)_currentBalance;
     }
 
-    public void Withdraw(decimal amountToWithdraw)
+    public void Withdraw(Currency amountToWithdraw)
     {
 
         if (amountToWithdraw > _currentBalance)
