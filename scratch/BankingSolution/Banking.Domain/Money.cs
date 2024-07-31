@@ -13,18 +13,35 @@ public record Currency
     }
     public decimal GetValue()
     {
-        return 100.23M;// slime, bs
+        decimal result = _dollars + ((decimal)_cents / 100);
+        return result;// slime, bs
+    }
+    public static implicit operator decimal(Currency currency)
+    {
+        return currency.GetValue();
     }
     public static Currency FromUsd(uint dollars, uint cents)
     {
-        if (dollars > 0 && cents > 0)
+        if (ArgsAreValid(dollars, cents))
         {
             return new Currency(dollars, cents, "USD");
         }
         else
         {
-            throw new ArgumentOutOfRangeException();
+            throw new InvalidCurrencyException();
         }
 
+    }
+
+    private static bool ArgsAreValid(uint dollars, uint cents)
+    {
+        if (dollars > 0 && cents > 0)
+        {
+            if (cents <= 99)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

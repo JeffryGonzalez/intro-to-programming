@@ -2,27 +2,26 @@
 namespace Banking.Tests.Money;
 public class CreatingMoney
 {
-    [Fact]
-    public void HappyPath()
+    [Theory]
+    [InlineData(100, 23, 100.23)]
+    [InlineData(12, 18, 12.18)]
+    public void HappyPath(uint dollars, uint cents, decimal expected)
     {
-        uint dollars = 100;
-        uint cents = 23;
-
         var validMoney = Currency.FromUsd(dollars, cents);
-
-
-        Assert.Equal(100.23M, validMoney.GetValue());
-
+        Assert.Equal(expected, validMoney.GetValue());
+        decimal amount = validMoney;
+        Assert.Equal(expected, amount);
     }
 
-    [Fact]
-
-    public void BadPath()
+    [Theory]
+    [InlineData(0)]
+    [InlineData(101)]
+    public void BadPath(uint cents)
     {
-        //var dollars = 0;
-        //var cents = 23;
-
-        var validMoney = Currency.FromUsd(23, 0);
+        Assert.Throws<InvalidCurrencyException>(() =>
+        {
+            Currency.FromUsd(1, cents);
+        });
 
 
     }
