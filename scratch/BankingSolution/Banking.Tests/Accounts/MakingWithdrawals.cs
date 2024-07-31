@@ -9,7 +9,7 @@ public class MakingWithdrawals
     [InlineData(112.25)]
     public void WithdrawalsDecreaseBalance(decimal amountToWithdraw)
     {
-        var account = new Account();
+        var account = new Account(new DummyBonusCalculator());
         var openingBalance = account.GetBalance();
 
         account.Withdraw((TransactionAmount)amountToWithdraw);
@@ -21,7 +21,7 @@ public class MakingWithdrawals
     [Fact]
     public void CanWithdrawFullBalance()
     {
-        var account = new Account();
+        var account = new Account(new DummyBonusCalculator());
 
         // UG-LEE.... needs help.
         account.Withdraw((TransactionAmount)(decimal)account.GetBalance());

@@ -6,7 +6,7 @@ public class OverdraftNotAllowed
     [Fact]
     public void OverdraftDoesNotDecreaseBalance()
     {
-        var account = new Account();
+        var account = new Account(new DummyBonusCalculator());
         var openingBalance = account.GetBalance();
 
 

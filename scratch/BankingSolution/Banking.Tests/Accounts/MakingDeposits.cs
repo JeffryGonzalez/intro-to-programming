@@ -10,7 +10,7 @@ public class MakingDeposits
     public void DepositingIncreasesBalance(decimal amountToDeposit)
     {
         // Given
-        var account = new Account();
+        var account = new Account(new DummyBonusCalculator());
         var openingBalance = account.GetBalance();
 
         // When

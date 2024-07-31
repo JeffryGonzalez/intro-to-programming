@@ -18,7 +18,7 @@ import {toSignal} from '@angular/core/rxjs-interop'
 })
 export class NewIssueComponent {
 
-    #client = inject(HttpClient);
+     #client = inject(HttpClient);
 
     software = toSignal(this.#client.get<{ id: string; title: string}[]>("http://localhost:1337/api/software"));
 }
