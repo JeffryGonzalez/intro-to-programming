@@ -12,7 +12,7 @@ public class MakingWithdrawals
         var account = new Account();
         var openingBalance = account.GetBalance();
 
-        account.Withdraw(amountToWithdraw);
+        account.Withdraw((TransactionAmount)amountToWithdraw);
 
         var newBalance = account.GetBalance();
         Assert.Equal(openingBalance - amountToWithdraw, newBalance);
@@ -23,9 +23,9 @@ public class MakingWithdrawals
     {
         var account = new Account();
 
-        account.Withdraw(account.GetBalance());
+        account.Withdraw((TransactionAmount)account.GetBalance().Balance);
 
-        Assert.Equal(0, account.GetBalance());
+        Assert.Equal(0M, account.GetBalance());
     }
 
 }

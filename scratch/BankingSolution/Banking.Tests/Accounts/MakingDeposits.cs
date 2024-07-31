@@ -6,6 +6,7 @@ public class MakingDeposits
     [Theory]
     [InlineData(100.25)]
     [InlineData(2.48)]
+
     public void DepositingIncreasesBalance(decimal amountToDeposit)
     {
         // Given
@@ -13,15 +14,17 @@ public class MakingDeposits
         var openingBalance = account.GetBalance();
 
         // When
-
-        account.Deposit(amountToDeposit);
+        //var amount = Currency.FromUsd(0, 0);
+        account.Deposit((TransactionAmount)amountToDeposit);
 
         // Then
         var newBalance = account.GetBalance();
 
-        Assert.Equal(openingBalance + amountToDeposit,
+        Assert.Equal(openingBalance.Balance + amountToDeposit,
             newBalance);
 
 
     }
+
+
 }
