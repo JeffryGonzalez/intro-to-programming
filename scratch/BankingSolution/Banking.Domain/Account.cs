@@ -9,7 +9,7 @@ public class Account
     public void Deposit(TransactionAmount amountToDeposit)
     {
 
-        _currentBalance += amountToDeposit * 1.10M;
+        _currentBalance += amountToDeposit;
     }
 
     public AccountBalance GetBalance()
