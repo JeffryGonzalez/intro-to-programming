@@ -6,7 +6,7 @@ public class CalculatorTests
     private Calculator _calculator;
     public CalculatorTests()
     {
-        _calculator = new Calculator();
+        _calculator = new Calculator(Substitute.For<ILogger>(), Substitute.For<IWebService>());
     }
 
 
@@ -44,4 +44,12 @@ public class CalculatorTests
     }
 
 
+}
+
+public class DummyLogger : ILogger
+{
+    public void LogMessage(string numbers)
+    {
+        // meh
+    }
 }
