@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HelpDesk.Api.Software;
 
+
 public class SoftwareController : ControllerBase
 {
     private IDocumentSession _documentSession;
@@ -14,6 +15,7 @@ public class SoftwareController : ControllerBase
 
 
     // GET /api/software
+
     [HttpGet("/api/software")]
     public async Task<ActionResult> GetTheSoftwareCatalog()
     {
@@ -29,6 +31,8 @@ public class SoftwareController : ControllerBase
         await _documentSession.SaveChangesAsync();
         return Ok(thingToSaveInTheDatabase);
     }
+
+
 }
 
 public record SoftwareItem(string Id, string Title);
