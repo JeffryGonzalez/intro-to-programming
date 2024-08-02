@@ -4,3 +4,17 @@ GET http://localhost:1337/api/software
 Accept: application/json
 
 ###
+
+POST http://localhost:1337/api/software
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Jetbrains Rider"
+}
+
+
+###
+
+GET http://localhost:1337/api/software/f12842f1-40a8-4df0-8371-47520b3a9c96
+Accept: application/json
