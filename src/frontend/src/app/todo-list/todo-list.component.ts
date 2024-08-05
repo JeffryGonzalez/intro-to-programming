@@ -8,7 +8,7 @@ import { TodoListItem } from './models';
   imports: [TodoEntryComponent, TodosListComponent],
   template: `
  
-    <app-todo-entry />
+    <app-todo-entry (itemAdded)="addThis($event)" />
     <app-list [todos]="items()" />
    
   `,
@@ -16,23 +16,13 @@ import { TodoListItem } from './models';
 })
 export class TodoListComponent {
 
-  items =signal<TodoListItem[]>([
-    {
-      id: '1',
-      description: 'Fix Book Shelf',
-      completed: false,
-    },
-    {
-      id: '2',
-      description: 'Do recall on car',
-      completed: false,
-      priority: 'Urgent',
-    },
-    {
-      id: '3',
-      description: 'Learn TypeScript',
-      completed: true,
-      priority: 'Future',
-    },
-  ]);
+  addThis(description: string) {
+    const newItem: TodoListItem = {
+      id: crypto.randomUUID(),
+      description,
+      completed: false
+    }
+    this.items.set([newItem, ...this.items()])
+  }
+  items = signal<TodoListItem[]>([ ]);
 }
