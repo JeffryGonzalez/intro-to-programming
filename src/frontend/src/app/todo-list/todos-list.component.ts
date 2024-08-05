@@ -26,7 +26,13 @@ import { TodosStore } from '../services/todos.store';
               <span>{{ todo.description }}</span>
               } @else {
               <span class="line-through">{{ todo.description }}</span>
+              <div class="join">
+  
+</div>
               }
+<button class="btn btn-xs join-item">Make Urgent</button>
+  <button class="btn btn-xs join-item">Make Future</button>
+  <button class="btn btn-xs join-item">Clear Priority</button>
             </p>
           </div>
         </li>
