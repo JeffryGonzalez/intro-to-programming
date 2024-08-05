@@ -1,5 +1,6 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { TodoListItem } from './models';
+import { TodosStore } from '../services/todos.store';
 
 @Component({
   selector: 'app-list',
@@ -21,7 +22,7 @@ import { TodoListItem } from './models';
 
             <p>
               @if(todo.completed === false) {
-              <button class="btn btn-sm btn-error">X</button>
+              <button class="btn btn-sm btn-error" (click)="store.markTodoComplete(todo)">X</button>
               <span>{{ todo.description }}</span>
               } @else {
               <span class="line-through">{{ todo.description }}</span>
@@ -39,4 +40,6 @@ import { TodoListItem } from './models';
 })
 export class TodosListComponent {
   todos = input.required<TodoListItem[]>()
+
+  store = inject(TodosStore);
 }
