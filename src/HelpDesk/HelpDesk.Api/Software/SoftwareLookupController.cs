@@ -9,7 +9,7 @@ public class SoftwareLookupController(IDocumentSession _documentSession) : Contr
     [HttpGet("/api/software/{id:guid}")]
     public async Task<ActionResult> GetSoftwareById(string id)
     {
-        var response = await _documentSession.Query<SoftwareItem>().Where(item => item.Id == id).SingleOrDefaultAsync();
+        var response = await _documentSession.Query<SoftwareItem>().Where(item => item.Id == Guid.Parse(id)).SingleOrDefaultAsync();
         if (response is null)
         {
             return NotFound();

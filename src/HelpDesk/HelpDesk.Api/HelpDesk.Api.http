@@ -10,11 +10,11 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "title": "Docker Desktop"
+ "title": "Word"
 }
 
 
 ###
 
-GET http://localhost:1337/api/software/f12842f1-40a8-4df0-8371-47520b3a9c96
+GET http://localhost:1337/api/software/4491efc9-8f15-4b5e-9cc7-bc18052639dc
 Accept: application/json
