@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import {toSignal} from '@angular/core/rxjs-interop'
-
+type SoftwareItem = { id: string, title: string}
 @Component({
   standalone: true,
   selector: 'app-new-issue',
@@ -20,5 +20,6 @@ export class NewIssueComponent {
 
      #client = inject(HttpClient);
 
-    software = toSignal(this.#client.get<{ id: string; title: string}[]>("http://localhost:1337/api/software"));
+     
+    software = toSignal(this.#client.get<SoftwareItem[]>("http://localhost:1337/api/software"));
 }
