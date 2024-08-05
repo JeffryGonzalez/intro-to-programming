@@ -1,28 +1,24 @@
-import { Component, signal } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { TodosStore } from '../services/todos.store';
 import { TodoEntryComponent } from "./todo-entry.component";
 import { TodosListComponent } from "./todos-list.component";
-import { TodoListItem } from './models';
-
 @Component({
   standalone: true,
-  imports: [TodoEntryComponent, TodosListComponent],
+  imports: [TodoEntryComponent, TodosListComponent, JsonPipe],
   template: `
  
     <app-todo-entry (itemAdded)="addThis($event)" />
     <app-list [todos]="items()" />
-   
+
   `,
   styles: ``,
 })
 export class TodoListComponent {
 
+   store = inject(TodosStore);
+   items = this.store.entities
   addThis(description: string) {
-    const newItem: TodoListItem = {
-      id: crypto.randomUUID(),
-      description,
-      completed: false
-    }
-    this.items.set([newItem, ...this.items()])
+   this.store.addTodoItem(description);
   }
-  items = signal<TodoListItem[]>([ ]);
 }

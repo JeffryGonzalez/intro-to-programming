@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TodosStore } from '../services/todos.store';
 
 @Component({
   selector: 'app-nav-bar',
@@ -51,10 +52,15 @@ import { RouterLink } from '@angular/router';
         </ul>
       </div>
       <div class="navbar-end">
-        <a class="btn">Button</a>
+        <span> 
+          You have {{summary().totalItems}} items on your todo list 
+          ({{summary().completeItems}} completed, {{summary().incompleteItems}} incomplete)</span>
       </div>
     </div>
   `,
   styles: ``,
 })
-export class NavBarComponent {}
+export class NavBarComponent {
+  #store = inject(TodosStore);
+  summary = this.#store.getSummary;
+}
