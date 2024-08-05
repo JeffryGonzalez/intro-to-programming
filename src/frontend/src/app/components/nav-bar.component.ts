@@ -47,6 +47,7 @@ import { RouterLink } from '@angular/router';
           <li><a routerLink="new-issue">Create an Issue</a></li>
          
           <li><a routerLink="issues">See Issues</a></li>
+          <li><a routerLink="todo-list">Todo List</a></li>
         </ul>
       </div>
       <div class="navbar-end">

@@ -21,4 +21,13 @@ Add some validation.
 #### Angular Introduction
 
 - State Management - Services, Signals, etc.
+    - Binding Expressions
+    - decisions/loops
+    - Components
+        - Inputs/Outputs
+    - State "flows" down.
+    - "Default" change detection.
+    - Signals
+    - Observables (later).
+
 
