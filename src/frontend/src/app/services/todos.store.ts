@@ -2,6 +2,7 @@ import {
   patchState,
   signalStore,
   withComputed,
+  withHooks,
   withMethods,
 } from '@ngrx/signals';
 import {
@@ -65,6 +66,11 @@ export const TodosStore = signalStore(
         patchState(state, addEntity(newItem));
       },
     };
+  }),
+  withHooks({
+    onInit(store) {
+      //store._loadTodos();
+    },
   })
 );
 

@@ -1,4 +1,4 @@
-import { http, HttpResponse } from 'msw';
+import { delay, http, HttpResponse } from 'msw';
 import { TodoListItem } from '../app/todo-list/models';
 
 const fakeTodos: TodoListItem[] = [
@@ -8,7 +8,8 @@ const fakeTodos: TodoListItem[] = [
 ];
 
 const handlers = [
-  http.get('http://localhost:1337/api/todos', () => {
+  http.get('http://localhost:1377/api/todos', async () => {
+    await delay(2500);
     return HttpResponse.json(fakeTodos);
   }),
 ];
