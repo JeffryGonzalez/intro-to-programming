@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TodosStore } from '../services/todos.store';
+import { FizzBuzzHeaderComponent } from './fizz-buzz-header.component';
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, FizzBuzzHeaderComponent],
   template: `
     <div class="navbar bg-base-100">
       <div class="navbar-start">
@@ -46,16 +47,20 @@ import { TodosStore } from '../services/todos.store';
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
           <li><a routerLink="new-issue">Create an Issue</a></li>
-         
+
           <li><a routerLink="issues">See Issues</a></li>
           <li><a routerLink="todo-list">Todo List</a></li>
           <li><a routerLink="counter">Counter</a></li>
         </ul>
       </div>
       <div class="navbar-end">
-        <span> 
-          You have {{summary().totalItems}} items on your todo list 
-          ({{summary().completeItems}} completed, {{summary().incompleteItems}} incomplete)</span>
+        <app-header-fizzbuzz />
+        <span>
+          You have {{ summary().totalItems }} items on your todo list ({{
+            summary().completeItems
+          }}
+          completed, {{ summary().incompleteItems }} incomplete)</span
+        >
       </div>
     </div>
   `,
