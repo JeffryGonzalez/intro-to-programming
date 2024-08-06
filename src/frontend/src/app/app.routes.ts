@@ -3,6 +3,7 @@ import { IssueListComponent } from './components/issue-list.component';
 import { NewIssueComponent } from './components/new-issue.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { CounterComponent } from './counter/counter.component';
+import { CounterStore } from './services/counter.store';
 
 export const routes: Routes = [
     {
@@ -19,6 +20,7 @@ export const routes: Routes = [
     },
     {
         path: 'counter',
-        component: CounterComponent
+        component: CounterComponent,
+        providers: [CounterStore]
     }
 ];
