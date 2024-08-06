@@ -1,30 +1,59 @@
-import { patchState, signalStore, withComputed, withMethods } from '@ngrx/signals';
-import { addEntity, updateEntity, withEntities } from '@ngrx/signals/entities';
+import {
+  patchState,
+  signalStore,
+  withComputed,
+  withMethods,
+} from '@ngrx/signals';
+import {
+  addEntities,
+  addEntity,
+  updateEntity,
+  withEntities,
+} from '@ngrx/signals/entities';
 import { TodoListItem, TodoListSummary } from '../todo-list/models';
-import { computed } from '@angular/core';
+import { computed, inject } from '@angular/core';
+import { rxMethod } from '@ngrx/signals/rxjs-interop';
+import { pipe, switchMap } from 'rxjs';
+import { TodosDataService } from './todos-data.service';
+import { tapResponse } from '@ngrx/operators';
 
 export const TodosStore = signalStore(
   { providedIn: 'root' },
   withEntities<TodoListItem>(),
-  withComputed(({entities}) => {
-    
+  withComputed(({ entities }) => {
     return {
-        
-        getSummary: computed(() => {
-            return {
-                totalItems: entities().length,
-                incompleteItems: entities().filter(t => t.completed === false).length,
-                completeItems: entities().filter(t => t.completed === true).length
-            }  as TodoListSummary
-        })
-    }
+      getSummary: computed(() => {
+        return {
+          totalItems: entities().length,
+          incompleteItems: entities().filter((t) => t.completed === false)
+            .length,
+          completeItems: entities().filter((t) => t.completed === true).length,
+        } as TodoListSummary;
+      }),
+    };
   }),
   withMethods((state) => {
+    const dataService = inject(TodosDataService);
     return {
+      loadTodos: rxMethod<void>(
+        pipe(
+          switchMap(() => dataService.loadTodos()),
+          tapResponse({
+            next: (items) => patchState(state, addEntities(items)),
+            error: (err) => console.error('Bummer', err),
+          })
+        )
+      ),
       markTodoComplete(item: TodoListItem) {
-        patchState(state, updateEntity({id: item.id, changes: {
-         
-          completed: true}}))
+        patchState(
+          state,
+          updateEntity({
+            id: item.id,
+            changes: {
+              completed: true,
+            },
+          })
+        );
       },
 
       addTodoItem(description: string) {
