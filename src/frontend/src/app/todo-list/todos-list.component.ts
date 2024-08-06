@@ -8,6 +8,7 @@ import { TodosStore } from '../services/todos.store';
   imports: [],
   template: `
     <section>
+     
       <ul>
         @for(todo of todos(); track todo.id) {
         <li class="card">
@@ -40,6 +41,7 @@ import { TodosStore } from '../services/todos.store';
           <p>Nothing on your list! Good job! Take a nap!
         }
       </ul>
+     
     </section>
   `,
   styles: ``,

@@ -14,12 +14,14 @@ import {
 import { TodoListItem, TodoListSummary } from '../todo-list/models';
 import { computed, inject } from '@angular/core';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
-import { pipe, switchMap } from 'rxjs';
+import { pipe, switchMap, tap } from 'rxjs';
 import { TodosDataService } from './todos-data.service';
 import { tapResponse } from '@ngrx/operators';
+import { withApiLoadingState } from './api.store-feature';
 
 export const TodosStore = signalStore(
   { providedIn: 'root' },
+  withApiLoadingState(),
   withEntities<TodoListItem>(),
   withComputed(({ entities }) => {
     return {
@@ -38,9 +40,13 @@ export const TodosStore = signalStore(
     return {
       loadTodos: rxMethod<void>(
         pipe(
+          tap(() => state.setLoading()),
           switchMap(() => dataService.loadTodos()),
           tapResponse({
-            next: (items) => patchState(state, addEntities(items)),
+            next: (items) => {
+              patchState(state, addEntities(items));
+              state.doneLoading();
+            },
             error: (err) => console.error('Bummer', err),
           })
         )

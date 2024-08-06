@@ -7,8 +7,12 @@ import { TodosListComponent } from './todos-list.component';
   standalone: true,
   imports: [TodoEntryComponent, TodosListComponent, JsonPipe],
   template: `
+    @if(store.isLoading()) {
+    <span class="loading loading-bars loading-md"></span>
+    } @else {
     <app-todo-entry (itemAdded)="addThis($event)" />
     <app-list [todos]="items()" />
+    }
   `,
   styles: ``,
 })
