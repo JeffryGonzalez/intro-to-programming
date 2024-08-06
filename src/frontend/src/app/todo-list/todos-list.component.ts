@@ -45,7 +45,7 @@ import { TodosStore } from '../services/todos.store';
   styles: ``,
 })
 export class TodosListComponent {
-  todos = input.required<TodoListItem[]>()
+  todos = input.required<TodoListItem[]>();
 
   store = inject(TodosStore);
 }

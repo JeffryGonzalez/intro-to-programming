@@ -49,6 +49,7 @@ import { TodosStore } from '../services/todos.store';
          
           <li><a routerLink="issues">See Issues</a></li>
           <li><a routerLink="todo-list">Todo List</a></li>
+          <li><a routerLink="counter">Counter</a></li>
         </ul>
       </div>
       <div class="navbar-end">
