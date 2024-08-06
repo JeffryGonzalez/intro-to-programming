@@ -1,7 +1,3 @@
-import software from './software'
+import software from './software';
 
-
-export const handlers = [
-
-  
-];
+export const handlers = [...software];

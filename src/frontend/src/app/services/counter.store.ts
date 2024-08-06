@@ -1,9 +1,17 @@
-import { computeMsgId } from '@angular/compiler';
 import { computed } from '@angular/core';
+import * as zod from 'zod';
+
+const StateSchema = zod.object({
+  current: zod.number(),
+  by: zod.union([zod.literal(1), zod.literal(3), zod.literal(5)]),
+});
+
 import {
   patchState,
   signalStore,
+  watchState,
   withComputed,
+  withHooks,
   withMethods,
   withState,
 } from '@ngrx/signals';
@@ -48,5 +56,22 @@ export const CounterStore = signalStore(
         return 'none';
       }),
     };
+  }),
+  withHooks({
+    onInit(store) {
+      const savedState = localStorage.getItem('counter-state');
+      if (savedState !== null) {
+        try {
+          const suspectObject = JSON.parse(savedState);
+          const actualState = StateSchema.parse(suspectObject);
+          patchState(store, actualState);
+        } catch (e) {
+          localStorage.removeItem('counter-state');
+        }
+      }
+      watchState(store, (state) => {
+        localStorage.setItem('counter-state', JSON.stringify(state));
+      });
+    },
   })
 );
