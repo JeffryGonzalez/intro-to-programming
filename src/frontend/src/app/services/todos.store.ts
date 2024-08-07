@@ -14,7 +14,7 @@ import {
 import { TodoListItem, TodoListSummary } from '../todo-list/models';
 import { computed, inject } from '@angular/core';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
-import { pipe, switchMap, tap } from 'rxjs';
+import { concatMap, pipe, switchMap, tap } from 'rxjs';
 import { TodosDataService } from './todos-data.service';
 import { tapResponse } from '@ngrx/operators';
 import { withApiLoadingState } from './api.store-feature';
@@ -40,7 +40,7 @@ export const TodosStore = signalStore(
     return {
       loadTodos: rxMethod<void>(
         pipe(
-          tap(() => state.setLoading()),
+          tap(() => state.setLoading()), // do
           switchMap(() => dataService.loadTodos()),
           tapResponse({
             next: (items) => {
@@ -63,14 +63,15 @@ export const TodosStore = signalStore(
         );
       },
 
-      addTodoItem(description: string) {
-        const newItem: TodoListItem = {
-          id: crypto.randomUUID(),
-          description,
-          completed: false,
-        };
-        patchState(state, addEntity(newItem));
-      },
+      addTodoItem: rxMethod<string>(
+        pipe(
+          concatMap((description) => dataService.addTodo({ description })),
+          tapResponse({
+            next: (item) => patchState(state, addEntity(item)),
+            error: (err) => console.error(err),
+          })
+        )
+      ),
     };
   }),
   withHooks({

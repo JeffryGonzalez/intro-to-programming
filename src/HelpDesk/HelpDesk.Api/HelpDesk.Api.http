@@ -7,6 +7,7 @@ Accept: application/json
 
 POST http://localhost:1337/api/software
 Content-Type: application/json
+Authorization: Bearer 389839893.389839893.38983983
 Accept: application/json
 
 {
@@ -18,3 +19,7 @@ Accept: application/json
 
 GET http://localhost:1337/api/software/4491efc9-8f15-4b5e-9cc7-bc18052639dc
 Accept: application/json
+
+
+### 
+GET http://localhost:1337/api/status
