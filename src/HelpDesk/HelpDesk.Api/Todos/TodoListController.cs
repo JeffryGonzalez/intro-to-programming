@@ -5,13 +5,16 @@ namespace HelpDesk.Api.Todos;
 
 public class TodoListController(
     IDocumentSession session,
-    INotifyTodoListStuff _todoListItemNotifications
+    INotifyTodoListStuff _todoListItemNotifications,
+    ILogger<TodoListController> logger
     ) : ControllerBase
 {
 
     [HttpGet("/api/todos")]
     public async Task<ActionResult<CollectionResponse<TodoItemResponseModel>>> GetAllTodos()
     {
+        // TODO talk about this.
+        logger.LogInformation("Getting some todos, yo");
         var items = await session.Query<TodoItemEntity>()
             .Select(t => new TodoItemResponseModel()
             {

@@ -12,7 +12,10 @@ services:
       - ./db/:/docker-entrypoint-initdb.d/
     ports:
       - 5439:5432
-
+  notification:
+    image: jeffrygonzalez/notification-api:v1
+    ports:
+      - 1338:8080
   adminer:
     image: adminer
     restart: always
