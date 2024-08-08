@@ -1,0 +1,250 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "N1bZiZTGSCGG-PKc-_XhF",
+      "type": "rectangle",
+      "x": 466,
+      "y": 186,
+      "width": 171,
+      "height": 154,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1724222073,
+      "version": 21,
+      "versionNonce": 378254649,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "7xpsd8QvwNP2nuwnX1WMC",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1723134291461,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "ecdAEBmCWcveMf_Suo2Yl",
+      "type": "rectangle",
+      "x": 909,
+      "y": 275,
+      "width": 171,
+      "height": 154,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1111544151,
+      "version": 33,
+      "versionNonce": 1866027001,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "FRICiK-rUVsAIVLCVjake",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1723134002416,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "g8CV_FhZeLWtERFzlAPxN",
+      "type": "rectangle",
+      "x": 549,
+      "y": 501,
+      "width": 171,
+      "height": 154,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "seed": 2139784983,
+      "version": 43,
+      "versionNonce": 1351121657,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "7xpsd8QvwNP2nuwnX1WMC",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1723134291461,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "FRICiK-rUVsAIVLCVjake",
+      "type": "arrow",
+      "x": 629,
+      "y": 231,
+      "width": 273,
+      "height": 59,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 181171191,
+      "version": 25,
+      "versionNonce": 1931090713,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1723134002416,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          273,
+          59
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": {
+        "elementId": "ecdAEBmCWcveMf_Suo2Yl",
+        "focus": 0.4399877232356947,
+        "gap": 7
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "jG6Sxc6zTu1u9Rjdg8E5U",
+      "type": "text",
+      "x": 1171,
+      "y": 282,
+      "width": 377.29974365234375,
+      "height": 375,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1569262457,
+      "version": 343,
+      "versionNonce": 1540439,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1723134116571,
+      "link": null,
+      "locked": false,
+      "text": "1. RPCs ( remote procedure calls )\n    - Make an HTTP request\n    - SUPER common for places that \n      are evolving from \"SOA\"\n\n2. Messaging\n    - Use asynchronous messaging\n    - Queues, Event Streams, etc.\n    - e.g. Kafka, Amazon SNS, \n        RabbitMq, etc.\n\n3. Sharing Databases\n    - THIS IS THE WORST!!!!!\n    - THIS IS THE MOST COMMON!\n",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 368,
+      "containerId": null,
+      "originalText": "1. RPCs ( remote procedure calls )\n    - Make an HTTP request\n    - SUPER common for places that \n      are evolving from \"SOA\"\n\n2. Messaging\n    - Use asynchronous messaging\n    - Queues, Event Streams, etc.\n    - e.g. Kafka, Amazon SNS, \n        RabbitMq, etc.\n\n3. Sharing Databases\n    - THIS IS THE WORST!!!!!\n    - THIS IS THE MOST COMMON!\n",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "7xpsd8QvwNP2nuwnX1WMC",
+      "type": "arrow",
+      "x": 637,
+      "y": 241,
+      "width": 52,
+      "height": 253,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 25843607,
+      "version": 11,
+      "versionNonce": 28485145,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1723134291461,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          52,
+          253
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "N1bZiZTGSCGG-PKc-_XhF",
+        "focus": -0.8884359579489379,
+        "gap": 1
+      },
+      "endBinding": {
+        "elementId": "g8CV_FhZeLWtERFzlAPxN",
+        "focus": 0.7082561291958416,
+        "gap": 7
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

@@ -3,7 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HelpDesk.Api.Todos;
 
-public class TodoListController(IDocumentSession session) : ControllerBase
+public class TodoListController(
+    IDocumentSession session,
+    INotifyTodoListStuff _todoListItemNotifications
+    ) : ControllerBase
 {
 
     [HttpGet("/api/todos")]
@@ -46,6 +49,7 @@ public class TodoListController(IDocumentSession session) : ControllerBase
             Description = entity.Description,
         };
 
+        await _todoListItemNotifications.CheckForNoticationOnAsync(entity);
         return Ok(response);
     }
 }
