@@ -34,8 +34,8 @@
     },
     {
       "type": "text",
-      "version": 65,
-      "versionNonce": 25421912,
+      "version": 66,
+      "versionNonce": 502924889,
       "isDeleted": false,
       "id": "kdyxqXHphjWHByzUzjxV_",
       "fillStyle": "solid",
@@ -55,7 +55,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723034165497,
+      "updated": 1723058495089,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -66,7 +66,7 @@
       "containerId": null,
       "originalText": "Backend\n(Concurrent - lots of folks\nsharing this)",
       "lineHeight": 1.25,
-      "baseline": 67
+      "baseline": 68
     },
     {
       "type": "rectangle",
@@ -99,8 +99,8 @@
     },
     {
       "type": "text",
-      "version": 83,
-      "versionNonce": 1355878696,
+      "version": 84,
+      "versionNonce": 1532159927,
       "isDeleted": false,
       "id": "Ij2ogNVnBOkLDyVa6IS7q",
       "fillStyle": "solid",
@@ -120,7 +120,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906575,
+      "updated": 1723058495091,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -131,7 +131,7 @@
       "containerId": null,
       "originalText": "Frontend (UI, Angular)\nA single user, but multiple instances)",
       "lineHeight": 1.25,
-      "baseline": 42
+      "baseline": 43
     },
     {
       "type": "rectangle",
@@ -246,8 +246,8 @@
     },
     {
       "type": "text",
-      "version": 23,
-      "versionNonce": 761394520,
+      "version": 24,
+      "versionNonce": 1702482745,
       "isDeleted": false,
       "id": "N0ac107lRputPYCTsylNV",
       "fillStyle": "solid",
@@ -267,7 +267,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906577,
+      "updated": 1723058495092,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -278,12 +278,12 @@
       "containerId": null,
       "originalText": "Stateful (holds data)",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 43,
-      "versionNonce": 1239723048,
+      "version": 44,
+      "versionNonce": 640342231,
       "isDeleted": false,
       "id": "TTxsw5-MJ26nXsziPF8Qg",
       "fillStyle": "solid",
@@ -303,7 +303,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906578,
+      "updated": 1723058495093,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -314,7 +314,7 @@
       "containerId": null,
       "originalText": "Services (stateless)",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "rectangle",
@@ -470,7 +470,7 @@
       "containerId": "XlcEBoNPg88NpY9EOhzoz",
       "originalText": "Application, state, \nbeautiful, perfect. tested,\ntanned rested and ready.",
       "lineHeight": 1.25,
-      "baseline": 70
+      "baseline": 71
     },
     {
       "type": "rectangle",
@@ -916,8 +916,8 @@
     },
     {
       "type": "text",
-      "version": 55,
-      "versionNonce": 891914840,
+      "version": 56,
+      "versionNonce": 1227686937,
       "isDeleted": false,
       "id": "OxnYUcnt3AJWfpsbC2TGQ",
       "fillStyle": "solid",
@@ -937,7 +937,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906578,
+      "updated": 1723058495093,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -948,7 +948,7 @@
       "containerId": null,
       "originalText": "Components",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -1029,8 +1029,8 @@
     },
     {
       "type": "text",
-      "version": 50,
-      "versionNonce": 869066536,
+      "version": 51,
+      "versionNonce": 1864869367,
       "isDeleted": false,
       "id": "bnTyb2lwOtMvrsm_S2Lld",
       "fillStyle": "solid",
@@ -1050,7 +1050,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906580,
+      "updated": 1723058495094,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1061,7 +1061,7 @@
       "containerId": null,
       "originalText": "\"Tie Fighter of Application Development\"",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "ellipse",
@@ -1530,8 +1530,8 @@
     },
     {
       "type": "text",
-      "version": 22,
-      "versionNonce": 1765179224,
+      "version": 23,
+      "versionNonce": 889657593,
       "isDeleted": false,
       "id": "rtNsrSFbv9IuSiwn8Vdrx",
       "fillStyle": "solid",
@@ -1551,7 +1551,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906580,
+      "updated": 1723058495095,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1562,12 +1562,12 @@
       "containerId": null,
       "originalText": "\"Backing Services\"",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 73,
-      "versionNonce": 1257620008,
+      "version": 74,
+      "versionNonce": 1431162647,
       "isDeleted": false,
       "id": "US7SAy6Ms2VTz_THZQqSE",
       "fillStyle": "solid",
@@ -1587,7 +1587,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906581,
+      "updated": 1723058495096,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1598,7 +1598,7 @@
       "containerId": null,
       "originalText": "Validation (effects)",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "ellipse",
@@ -1672,7 +1672,7 @@
       "containerId": "om9ITd8XdTy8gWEU52NvV",
       "originalText": "Application, state, \nbeautiful, perfect. tested,\ntanned rested and ready.",
       "lineHeight": 1.25,
-      "baseline": 70
+      "baseline": 71
     },
     {
       "type": "rectangle",
@@ -2118,8 +2118,8 @@
     },
     {
       "type": "text",
-      "version": 105,
-      "versionNonce": 1507644504,
+      "version": 106,
+      "versionNonce": 1250660825,
       "isDeleted": false,
       "id": "5qyBQ17JhXz8i7oVgVJjT",
       "fillStyle": "solid",
@@ -2139,7 +2139,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906582,
+      "updated": 1723058495096,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2150,7 +2150,7 @@
       "containerId": null,
       "originalText": "Controllers (validation)",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -2236,8 +2236,8 @@
     },
     {
       "type": "text",
-      "version": 80,
-      "versionNonce": 1581989160,
+      "version": 81,
+      "versionNonce": 588370999,
       "isDeleted": false,
       "id": "U5i8uyuILlaTJd5xQyDZj",
       "fillStyle": "solid",
@@ -2257,7 +2257,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906583,
+      "updated": 1723058495097,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2268,7 +2268,7 @@
       "containerId": null,
       "originalText": "\"Tie Fighter of API Development\"",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "ellipse",
@@ -2742,8 +2742,8 @@
     },
     {
       "type": "text",
-      "version": 48,
-      "versionNonce": 1827703128,
+      "version": 49,
+      "versionNonce": 785247929,
       "isDeleted": false,
       "id": "t-S7hdD3qkNAdg8AoQDa2",
       "fillStyle": "solid",
@@ -2763,7 +2763,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906587,
+      "updated": 1723058495097,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2774,12 +2774,12 @@
       "containerId": null,
       "originalText": "\"Backing Services\"",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 99,
-      "versionNonce": 2134464552,
+      "version": 100,
+      "versionNonce": 1616393559,
       "isDeleted": false,
       "id": "lL1siUrd3mA36FPDtZXCG",
       "fillStyle": "solid",
@@ -2799,7 +2799,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906588,
+      "updated": 1723058495098,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2810,12 +2810,12 @@
       "containerId": null,
       "originalText": "Validation (effects)",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 63,
-      "versionNonce": 767925848,
+      "version": 64,
+      "versionNonce": 410103705,
       "isDeleted": false,
       "id": "7LucgA50tL69qZx8nx3Oi",
       "fillStyle": "solid",
@@ -2835,7 +2835,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723033906590,
+      "updated": 1723058495098,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2846,7 +2846,7 @@
       "containerId": null,
       "originalText": "\"Functional Core / Imperative Shell\" pattern - Gary Bernhardt",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     }
   ],
   "appState": {
