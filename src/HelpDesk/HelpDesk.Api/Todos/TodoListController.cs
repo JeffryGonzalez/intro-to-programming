@@ -24,7 +24,7 @@ public class TodoListController(IDocumentSession session) : ControllerBase
     }
 
     [HttpPost("/api/todos")]
-    public async Task<ActionResult<TodoItemResponseModel>> AddItem(TodoItemRequestModel request)
+    public async Task<ActionResult<TodoItemResponseModel>> AddItem([FromBody] TodoItemRequestModel request)
     {
         // todo - validation
 
