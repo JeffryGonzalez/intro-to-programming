@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
 
 app.MapPost("/notifications", (NotificationRequest request) => {
 
-    app.Logger.LogInformation("A request was made for {0}", request.Description); // DUH!
+    app.Logger.LogInformation("A V2 REQUEST WAS MADE FOR  {0}", request.Description); // DUH!
     return TypedResults.NoContent();
 });
 

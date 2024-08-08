@@ -13,7 +13,7 @@ services:
     ports:
       - 5439:5432
   notification:
-    image: jeffrygonzalez/notification-api:v1
+    image: jeffrygonzalez/notification-api:v2
     ports:
       - 1338:8080
   adminer:
