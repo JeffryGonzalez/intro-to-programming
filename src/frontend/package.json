@@ -49,5 +49,8 @@
     "workerDirectory": [
       "src"
     ]
+  },
+  "volta": {
+    "node": "20.15.0"
   }
 }
