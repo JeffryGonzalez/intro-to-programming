@@ -16,6 +16,8 @@ services:
     image: jeffrygonzalez/notification-api:v2
     ports:
       - 1338:8080
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
   adminer:
     image: adminer
     restart: always

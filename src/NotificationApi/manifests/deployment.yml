@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-api
+  namespace: hypertheory
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: notification-api
+  template:
+    metadata:
+      labels:
+        app: notification-api
+    spec:
+      
+      containers:
+      - name: notification-api
+        image: jeffrygonzalez/notification-api:v3
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "2000m"
+          requests:
+            memory: "128Mi"
+            cpu: "500m"
+        env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Development
+
+        ports:
+        - containerPort: 8080
